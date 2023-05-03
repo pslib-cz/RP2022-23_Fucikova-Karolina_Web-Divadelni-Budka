@@ -1,0 +1,63 @@
+
+.hamburger {
+    --rotate-time: .15s;
+    --move-time: .1s;
+}
+
+.hamburger {
+    width: 60px;
+    height: 45px;
+    position: relative;
+}
+  
+.hamburger span {
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: black;
+    left: 0;
+}
+
+.hamburger span:nth-child(1) { 
+    top: 0px; 
+}
+.hamburger span:nth-child(2) { 
+    top: 18px;
+    transition: .5s;
+}
+  
+.hamburger span:nth-child(3) { 
+    bottom: 0px; 
+}
+
+
+@media screen and (max-width: 768px) { 
+    .hamburger.active span {
+        transform: translateY(0px);
+    }
+
+    .hamburger-nav.active {
+        transform: scaleY(1);
+    }
+
+    .hamburger.active span:nth-child(1){
+        transform: translateY(18px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2){
+        transform: translateX(200%);
+        transition: .5s;
+        overflow: hidden;
+    }
+
+    .hamburger.active span:nth-child(3){
+        transform: translateY(-18px) rotate(-45deg);
+    }
+}
+
+@media screen and (min-width: 768px){
+    .hamburger-nav{
+        transform: none;
+    }
+}
+

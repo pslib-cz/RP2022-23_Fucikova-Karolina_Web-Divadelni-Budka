@@ -1,0 +1,596 @@
+:root{
+    --Cerna: #000000;
+    --Bila: #FFFFFF;
+    --Seda: #D9D9D9;
+}
+
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h5{
+    font-weight: 400;
+}
+
+.nadpis-h1{
+    text-align: center;
+    padding-top: .2em;
+    margin-bottom: 0;
+    border-bottom: 4px solid var(--Cerna);
+    border-top: 4px solid var(--Cerna);
+    width: fit-content;
+}
+
+.h1__blok{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.odkaz{
+    color: var(--Bila);
+    border-bottom: 1px solid var(--Bila);
+}
+
+.youtube{
+    width: fit-content;
+    height: 40vh;
+}
+
+/*HEADER*/
+
+.header{
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    
+}
+
+.header__blackline{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 1em;
+}
+
+.header__email{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__email--text{
+    margin: 0;
+    color: white;
+}
+
+/*NAVIGACE*/
+
+.nav-link{
+    color: var(--Cerna);
+}
+
+.navbar{
+    position: absolute;
+    width: 60vw;
+    transition: 1s;
+    right: 0;
+}
+
+.nav-item{
+    display: block;
+    text-align: left;
+    border-bottom: 2px solid var(--Seda);
+    padding: .8em 0 .5em 1em;
+}
+
+/*HAMBURGER MENU*/
+
+.hamburger {
+    display: block;
+}
+
+.hamburger-nav {
+    background-color: var(--Bila);
+    border-top: 2px solid var(--Seda);
+    /*height: calc(100vh - 4px);*/
+    height: 100vh;
+}
+
+.hamburger-nav {
+    transform: scaleY(0);
+    transition: .5s;
+    transform-origin: top;
+}
+
+.hamburger-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 1em;
+    color: var(--Cerna);
+    background-color: var(--Bila);
+}
+.hamburger-nav menu {
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (min-width: 768px) {
+    .hamburger-btn {
+        display: none;
+    }
+
+    .hamburger-nav {
+        transform: none;
+        background-color: var(--Bila);
+        border: none;
+        height: auto;
+    }
+
+    .hamburger-row {
+        display: flex;
+        justify-content: space-between;
+        color: var(--Cerna);
+        align-content: center;
+        padding: 0;
+    }
+}
+
+/*ÚVOD*/
+
+.novinky{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.novinky__blok{
+    max-width: calc(100vw - 50px);
+}
+
+.uvod__novinky--img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    max-width: 1000px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.uvod__text{
+    text-align: center;
+}
+
+.uvod__img img{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    object-fit: cover;
+}
+
+/*FILM*/
+
+.film__sec1{
+    background-image: linear-gradient(#523210, #744a28, #5a310b, #643e15, #6b4319, #130D06);
+    color: var(--Bila);
+    text-align: center;
+    padding-top: 1em;
+}
+
+.film__sec1--text1{
+    color: var(--Bila);
+    text-align: center;
+    margin: 0;
+    padding: 0 1em;
+}
+
+.film__sec1--text2{
+    color: var(--Bila);
+    margin: 0;
+    padding: 1em;
+    text-align: left;
+}
+
+.film__plakat{
+    margin: 0;
+}
+
+.film__plakat-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: #7D4C18;
+}
+
+.hodnoceni{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.logo-hodnoceni{
+    width: 100%;
+    object-fit: cover;
+    max-width: 120px;
+}
+
+.film__sec-trailer{
+    text-align: center;
+    border-bottom: 1px solid var(--Seda);
+    padding: 1em;
+}
+
+.film__film-o-filmu{
+    text-align: center;
+    padding: 1em;
+    background-image: linear-gradient(#ffffff, #dadada, #949494, #868686, #5c5c5c, #3d3d3d, #1a1a1a, #000000);
+}
+
+.film__soundrack{
+    text-align: center;
+    background-color: var(--Cerna);
+    color: var(--Bila);
+    padding: 1em;
+}
+
+.film__soundrack audio{
+    max-width: 240px;
+}
+
+.first-soundtrack{
+    border-top: 1px solid var(--Seda)
+}
+
+.soundtrack{
+    display: flex;
+    align-items: center;
+    background-color: var(--Cerna);
+    color: var(--Bila);
+    border-bottom: 1px solid var(--Seda);
+    /*justify-content: center;*/
+    padding: .5em;
+    justify-content: space-between;
+}
+
+.soundtrack__blok{
+    display: flex;
+    align-items: center;
+}
+
+.soundtrack__number{
+    font-size: 3em;
+    margin: 0;
+    padding: 0 .3em;
+}
+
+.soundtrack__text{
+    padding: .5em 0;
+}
+
+.soundtrack__text p{
+    margin: 0;
+    text-align: left;
+}
+
+.film__galerie{
+    text-align: center;
+}
+
+.picture{
+    margin: 0;
+}
+
+.galerie__picture--wide{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: .8em;
+}
+
+.galerie__picture--high{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    gap: 10px;
+}
+
+.film__galerie--img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.film__galerie--foto{
+    text-align: end;
+    
+}
+
+.film__galerie--foto a{
+    color: var(--Cerna);
+}
+
+.film__sponzori{
+    text-align: center;
+    color: var(--Bila);
+    background-color: var(--Cerna);
+    padding: 1em;
+}
+
+.sponzori{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    gap: 10px;
+}
+
+.sponzori__img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    max-width: 200px;
+}
+
+/*ARCHIV*/
+
+.archiv__obsah{
+    display: flex;
+    font-size: 1em;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.archiv__obsah a{
+    color: var(--Cerna);
+    margin: .5em;
+}
+
+.archiv__Tahy-kralu{
+    text-align: center;
+    color: var(--Bila);
+    background-image: url(/images/pozadi-velka-fotka-film.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+    background-repeat: no-repeat;
+    background-color: #35220F;
+}
+
+.archiv__obsazeni{
+    margin-bottom: 1em;
+}
+
+.archiv__obsazeni p{
+    margin: .2em;
+}
+
+.archiv__Special{
+    text-align: center;
+    color: var(--Bila);
+    background-image: url(/images/pozadi-special.png);
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+    background-repeat: no-repeat;
+    background-color: #4d4d4d;
+}
+
+.archiv__Pripad-ztracenych-nuzek, .archiv__The-scissors-case{
+    text-align: center;
+    color: var(--Bila);
+    background-image: url(/images/pozadi-pripad-ztracenych-nuzek.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+    background-repeat: no-repeat;
+    background-color: #4d4d4d;
+}
+
+.archiv__Vzestup-zmijozela{
+    text-align: center;
+    color: var(--Bila);
+    background-image: url(/images/pozadi-vzestup-zmijozela.png);
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+    background-repeat: no-repeat;
+    background-color: #113b0b;
+    border-top: 1px solid var(--Seda);
+}
+
+.archiv__Hadanky-ve-tme{
+    text-align: center;
+    color: var(--Bila);
+    background-image: url(/images/pozadi-hadanky-ve-tme.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+    background-repeat: no-repeat;
+    background-color: #2c2013;
+}
+
+.archiv__Tri-bratri{
+    text-align: center;
+    color: var(--Bila);
+    background-image: url(/images/pozadi-pribeh-tri-bratri.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+    background-repeat: no-repeat;
+    background-color: #4b4620;
+}
+
+.archiv__Tailor-of-Swaffham{
+    text-align: center;
+    color: var(--Bila);
+    background-image: url(/images/pozadi-Tailor-of-Swaffham.png);
+    /*background-image: radial-gradient(rgb(48, 80, 26), rgb(17, 75, 46), rgb(18, 58, 18), rgb(52, 85, 15));*/
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+    background-repeat: no-repeat;
+    background-color: #1f411b;
+}
+
+/*KONTAKT*/
+
+.kontakt--text{
+    text-align: center;
+}
+
+.kontakt__Adela-Putikova, .kontakt__Tomas-Machalka{
+    text-align: center;
+}
+
+.kontakt__picture{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    object-fit: contain;
+}
+
+/*FOOTER*/
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    padding: .5em;
+}
+
+.footer__logo{
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    object-fit: contain;
+}
+
+.footer__year{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer__text{
+    color: white;
+}
+
+.footer__text-desktop{
+    display: none;
+}
+
+@media screen and (min-width: 768px){
+/*Q-HEADER*/
+
+/*Q-NAVIGACE*/
+
+    .header__navigace{
+        display: flex;
+        align-items: center;
+        padding: 2em 1em;
+        justify-content: space-between;
+        background-color: var(--Bila);
+    }
+
+    .navbar{
+        display: flex;
+        /*position: relative;*/
+        justify-content: space-between;
+        transition: none;
+        right: 0;
+        justify-content: right;
+        margin: 0 2em;
+    }
+
+    .nav__pages{
+        display: flex;
+        align-items: center;
+        max-width: 600px;
+        justify-content: space-evenly;
+        width: 50vw;
+    }
+
+    .nav-item{
+        display: flex;
+        padding: 0.4em;
+        border: none;
+        justify-content: space-between;
+    }
+
+    .nav-item:hover{
+        border-bottom: 5px solid var(--Cerna);
+        padding-bottom: 0.1em;
+    }
+
+    .this-page{
+        border-bottom: 5px solid var(--Cerna);
+        padding-bottom: 0.1em;
+    }
+
+    /*Q-FILM*/  
+/*
+    .film__sec1--blok{
+        margin: auto 20em;
+    }
+*/
+
+    .film__sec1--plakat{
+        display: flex;
+        flex-direction: row-reverse;
+        padding: 2em 1em 1em 0;
+    }
+
+    .film__sec1--text1{
+        text-align: left;
+    }
+
+    .film__plakat{
+        margin: 0;
+        min-width: 400px;
+        height: 100%;
+        max-width: 500px;
+    }
+
+    /*Q-KONTAKT*/
+
+    .kontakt__Tomas-Machalka{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .kontakt__picture{
+        max-width: 500px;
+    }
+
+    .kontakt__Adela-Putikova{
+        display: flex;
+        align-items: center;
+    }
+
+    /*Q-FOOTER**/
+    .footer{
+        justify-content: space-between;
+    }
+
+    .footer__text-desktop{
+        display: flex;
+        color: var(--Bila);
+    }
+}    
