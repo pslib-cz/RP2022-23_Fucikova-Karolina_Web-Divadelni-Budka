@@ -166,11 +166,6 @@ h1, h2, h5{
     align-items: center;
 }
 
-.novinky__blok{
-    max-width: 800px;
-    width: 85vw;
-}
-
 .uvod__novinky--img{
     width: 100%;
     height: 100%;
@@ -184,7 +179,7 @@ h1, h2, h5{
 }
 
 .uvod__img{
-    margin: 0 1em;
+    margin: 0 1em 1em 1em;
 }
 
 .uvod__img img{
@@ -378,7 +373,7 @@ h1, h2, h5{
 .archiv__Tahy-kralu{
     text-align: center;
     color: var(--Bila);
-    background-image: url(/images/pozadi-velka-fotka-film.jpg);
+    background-image: url(../images/pozadi-velka-fotka-film.jpg);
     background-size: cover;
     background-position: center;
     padding: 1em;
@@ -397,7 +392,7 @@ h1, h2, h5{
 .archiv__Special{
     text-align: center;
     color: var(--Bila);
-    background-image: url(/images/pozadi-special.png);
+    background-image: url(../images/pozadi-special.png);
     background-size: cover;
     background-position: center;
     padding: 1em;
@@ -410,53 +405,55 @@ h1, h2, h5{
 .archiv__Pripad-ztracenych-nuzek, .archiv__The-scissors-case{
     text-align: center;
     color: var(--Bila);
-    background-image: url(/images/pozadi-pripad-ztracenych-nuzek.jpg);
+    background-image: url(../images/pozadi-pripad-ztracenych-nuzek.jpg);
     background-size: cover;
     background-position: center;
     padding: 1em;
     background-repeat: no-repeat;
     background-color: #535353;
+    border-bottom: 1px solid var(--Seda);
 }
 
 .archiv__Vzestup-zmijozela{
     text-align: center;
     color: var(--Bila);
-    background-image: url(/images/pozadi-vzestup-zmijozela.png);
+    background-image: url(../images/pozadi-vzestup-zmijozela.png);
     background-size: cover;
     background-position: center;
     padding: 1em;
     background-repeat: no-repeat;
     background-color: #0B1E0A;
-    border-top: 1px solid var(--Seda);
 }
 
 .archiv__Hadanky-ve-tme{
     text-align: center;
     color: var(--Bila);
-    background-image: url(/images/pozadi-hadanky-ve-tme.jpg);
+    background-image: url(../images/pozadi-hadanky-ve-tme.jpg);
     background-size: cover;
     background-position: center;
     padding: 1em;
     background-repeat: no-repeat;
     background-color: #414141;
     border-top: 1px solid var(--Seda);
+    border-bottom: 1px solid var(--Seda);
 }
 
 .archiv__Tri-bratri{
     text-align: center;
     color: var(--Bila);
-    background-image: url(/images/pozadi-pribeh-tri-bratri.jpg);
+    background-image: url(../images/pozadi-pribeh-tri-bratri.jpg);
     background-size: cover;
     background-position: center;
     padding: 1em;
     background-repeat: no-repeat;
     background-color: #554F48;
+    border-bottom: 1px solid var(--Seda);
 }
 
 .archiv__Tailor-of-Swaffham{
     text-align: center;
     color: var(--Bila);
-    background-image: url(/images/pozadi-Tailor-of-Swaffham.png);
+    background-image: url(../images/pozadi-Tailor-of-Swaffham.png);
     background-size: cover;
     background-position: center;
     padding: 1em;
@@ -477,6 +474,10 @@ h1, h2, h5{
 .kontakt__osoby--text{
     padding: 0 1em 1em 1em;
     margin: 0;
+}
+
+.kontakt__Adela-Putikova--text, .kontakt__Tomas-Machalka--text{
+    max-width: 550px;
 }
 
 .kontakt__picture{
@@ -517,8 +518,14 @@ h1, h2, h5{
     display: none;
 }
 
+/*MEDIAQ - MOBIL NA ŠÍŘKU*/
+
 @media screen and (min-width: 768px){
 /*Q-HEADER*/
+
+.header__blackline{
+    padding: 1em 2em;
+}
 
 /*Q-NAVIGACE*/
 
@@ -545,7 +552,7 @@ h1, h2, h5{
         display: flex;
         align-items: center;
         max-width: 600px;
-        justify-content: space-evenly;
+        justify-content: space-between;
         width: 50vw;
     }
 
@@ -566,57 +573,78 @@ h1, h2, h5{
         padding-bottom: 0.1em;
     }
 
-    /*Q-FILM*/  
-/*
-    .film__sec1--blok{
-        margin: auto 20em;
+/*Q-FILM*/  
+
+    .film__sec1{
+        display: flex;
+        justify-content: center;
     }
-*/
 
     .film__sec1--plakat{
         display: flex;
         flex-direction: row-reverse;
-        padding: 2em 1em 1em 0;
+        padding: 2em 1em 0 1em;
     }
 
     .film__sec1--text1{
         text-align: left;
+        font-size: 1.12em; /*1.25em*/
+        max-width: 320px;
     }
 
     .film__plakat{
-        margin: 0;
-        min-width: 400px;
-        height: 100%;
-        max-width: 500px;
+       min-width: 400px;
+       height: 100%;
+    }
+    
+    .YT-desktop{
+        height: 50vh;
+    }
+
+    .film__galerie--img{
+        object-fit: cover;
     }
 
     .film-o-filmu{
         display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
+    }
+
+    .film-o-filmu__YT-desktop{
+        min-width: 350px;
+        min-height: 195px;
     }
 
     /*Q-KONTAKT*/
 
     .kontakt__Tomas-Machalka{
         display: flex;
+        justify-content: center;
         flex-direction: row-reverse;
         align-items: center;
+        margin: auto 1em;
     }
 
     .kontakt__picture{
+        min-width: 300px;
         max-width: 500px;
     }
 
     .kontakt__Adela-Putikova{
         display: flex;
+        justify-content: center;
         align-items: center;
+        margin: auto 1em;
     }
 
     /*Q-FOOTER**/
     .footer{
         justify-content: space-between;
+        padding: .5em 1em;
     }
 
     .footer__text-desktop{
@@ -624,3 +652,158 @@ h1, h2, h5{
         color: var(--Bila);
     }
 }    
+
+/*FUNKCE - GRID - TEBLET*/
+
+@media screen and (min-width: 961px){
+
+/*Q-HEADER*/
+
+    .header__blackline{
+        padding: 1em 10em;
+    }
+
+    .header__navigace{
+        justify-content: space-between;
+        padding: 2em 10em;
+    }
+
+    .navbar{
+        position: relative;
+        margin: 0;
+    }
+
+    .nav__pages{
+        width: 40vw;
+    }
+
+/*Q-ÚVOD*/
+
+    .uvod{
+        margin: auto 10em;
+    }
+
+/*Q-FILM*/   
+
+    .film__sec1--blok{
+        margin: auto 10em;
+    }
+
+    .film__sec1--text1{
+        max-width: 250px;
+        min-width: 230px;
+    }
+
+    .film-o-filmu__blok{
+        margin: auto 10em;
+    }
+
+    .film__soundrack--blok{
+        margin: auto 10em;
+    }
+
+    .film__galerie{
+        margin: auto 10em;
+    }
+
+    .film__galerie, .sponzori{
+        margin: auto 10em;
+    }
+
+/*Q-ARCHIV*/
+
+    .archiv__obsah{
+        margin: auto 10em;
+    }
+
+    .archiv__Tahy-kralu, .archiv__Special, .archiv__Pripad-ztracenych-nuzek, .archiv__Vzestup-zmijozela, .archiv__Hadanky-ve-tme, .archiv__The-scissors-case, .archiv__Tri-bratri, .archiv__Tailor-of-Swaffham{
+        padding: 1em 10em;
+    }
+
+/*Q-KONTAKT*/
+
+    .kontakt--text{
+        margin: auto 10em;
+    }
+
+    .kontakt__Tomas-Machalka, .kontakt__Adela-Putikova{
+        margin: auto 10em;
+    }
+
+/*Q-FOOTER*/
+
+    .footer{
+        padding: .5em 10em;
+    }
+
+}
+
+/*Q-DESKTOP*/
+
+@media screen and (min-width: 1281px){
+
+/*Q-HEADER*/
+
+.header__blackline{
+    padding: 1em 15em;
+}
+
+.header__navigace{
+    justify-content: space-between;
+    padding: 2em 15em;
+}
+
+/*Q-ÚVOD*/
+
+.uvod{
+    margin: auto 20em;
+}
+
+/*Q-FILM*/   
+
+.film__sec1--blok{
+    margin: auto 20em;
+}
+
+.film__sec1--text1{
+    font-size: 1.2em;
+    max-width: 400px;
+}
+
+.film__plakat-img{
+    max-width: 500px;
+}
+
+.film-o-filmu__blok, .film__soundrack--blok, .film__galerie, .film__galerie, .sponzori{
+    margin: auto 20em;
+}
+
+/*Q-ARCHIV*/
+
+.archiv__obsah{
+    margin: auto 20em;
+}
+
+.archiv__Tahy-kralu, .archiv__Special, .archiv__Pripad-ztracenych-nuzek, .archiv__Vzestup-zmijozela, .archiv__Hadanky-ve-tme, .archiv__The-scissors-case, .archiv__Tri-bratri, .archiv__Tailor-of-Swaffham{
+    padding: 1em 20em;
+}
+
+/*Q-KONTAKT*/
+
+.kontakt--text, .kontakt__Tomas-Machalka, .kontakt__Adela-Putikova{
+    margin: auto 20em;
+}
+
+/*Q-FOOTER*/
+
+.footer{
+    padding: .5em 20em;
+}
+
+}
+
+/*
+@media screen and (min-width: 1435px){
+
+}
+*/
