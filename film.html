@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo/DB-logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/hamburger.css">
@@ -97,13 +98,13 @@
                     <p>Technické konzultace: Jan Myšák, Václav Chábera</p>
                     <p>Hrají: Tomáš Machálka, Jáchym Hrdý, Adéla Putíková, Laura Levko, Johannes Taller, Dominika Karbanová a další</p>
                     <p class="bold">Film naleznete na našem <a class="odkaz" href="https://www.youtube.com/watch?v=_wMPnLqng00&t=419s">YouTube kanálu</a>.</p>
-                    <div class="hodnoceni"><p>Ohodnoťte náš film na</p><a href="https://www.csfd.cz/film/1181448-sherlock-holmes-tahy-kralu/prehled/"><img class="logo-hodnoceni" src="./logo/csfd-logo.svg" alt="logo CSFD"></a><p>nebo na</p><a href="https://www.imdb.com/title/tt25785112/"><img class="logo-hodnoceni" src="./logo/imb-logo.svg" alt="logo IMBD"></a></div>
+                    <div class="hodnoceni"><p>Ohodnoťte náš film na</p><a href="https://www.csfd.cz/film/1181448-sherlock-holmes-tahy-kralu/prehled/"><img class="logo-hodnoceni" src="./logo/csfd-logo.svg" alt="logo CSFD"></a><p>nebo na</p><a href="https://www.imdb.com/title/tt25785112/"><img class="logo-imdb" src="./logo/imb-logo.svg" alt="logo IMDb"></a></div>
                 </div>
             </div>
         </section>
         <section class="film__sec-trailer">
             <h2>Trailer</h2>
-            <iframe class="youtube YT-desktop" src="https://www.youtube.com/embed/Zft8sgrDTXY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="YT-desktop YT-trailer" src="https://www.youtube.com/embed/Zft8sgrDTXY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </section>
         <section class="film__film-o-filmu">
             <h2>Film o filmu</h2>
@@ -203,7 +204,7 @@
                 </div>
                 <div class="galerie__picture--high">
                     <figure class="picture"><a class="picture__link" href="./images/nataceni3.jpg"><img class="film__galerie--img" src="./images/small/nataceni3.jpg" alt="Natáčení u Valdštejnských domků"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/film4.png"><img class="film__galerie--img" src="./images/small/nataceni4.jpg" alt="Kameraman Adam"></a></figure>
+                    <figure class="picture"><a class="picture__link" href="./images/nataceni4.jpg"><img class="film__galerie--img" src="./images/small/nataceni4.jpg" alt="Kameraman Adam"></a></figure>
                     <figure class="picture"><a class="picture__link" href="./images/Skupinovka-divadlo.jpg"><img class="film__galerie--img" src="./images/small/Skupinovka-divadlo.jpg" alt="Skupinová fotka DB v divadle"></a></figure>
                 </div>
             </div>
@@ -230,8 +231,7 @@
         </a>
         <p class="footer__text-desktop">Vytvořila: Karolína Fučíková</p>
     </footer>
-</body>
-<script type="text/javascript">
+<script>
     lightGallery(
         document.querySelector(".film__galerie"), {
         plugins: [lgZoom, lgThumbnail, lgAutoplay],
@@ -241,4 +241,5 @@
         selector: ".picture > a",
     });
 </script>
+</body>
 </html>

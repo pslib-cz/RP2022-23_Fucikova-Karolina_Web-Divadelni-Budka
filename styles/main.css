@@ -2,6 +2,7 @@
     --Cerna: #000000;
     --Bila: #FFFFFF;
     --Seda: #D9D9D9;
+    --Sediva: #797979;
 }
 
 
@@ -39,16 +40,6 @@ h1, h2, h5{
 .odkaz{
     color: var(--Bila);
     border-bottom: 1px solid var(--Bila);
-}
-
-.youtube{
-    min-width: 300px;
-    max-width: 560px;
-    width: 100%;
-    min-height: 200px;
-    max-height: 315px;
-    height: 31.5vh;
-    border: none;
 }
 
 .fornow{
@@ -166,6 +157,10 @@ h1, h2, h5{
     align-items: center;
 }
 
+.novinky__blok{
+    max-width: 550px;
+}
+
 .uvod__novinky--img{
     width: 100%;
     height: 100%;
@@ -237,16 +232,47 @@ h1, h2, h5{
     max-width: 120px;
 }
 
+.logo-imdb{
+    width: 100%;
+    object-fit: cover;
+    max-width: 75px;
+}
+
 .film__sec-trailer{
     text-align: center;
-    border-bottom: 1px solid var(--Seda);
+    border-bottom: 1px solid var(--Sediva);
     padding: 1em;
+}
+
+.YT-trailer{
+    min-width: 300px;
+    max-width: 560px;
+    width: 100%;
+    min-height: 180px;
+    border: none;
 }
 
 .film__film-o-filmu{
     text-align: center;
     padding: 1em;
     background-image: linear-gradient(#ffffff, #dadada, #949494, #868686, #5c5c5c, #3d3d3d, #1a1a1a, #000000);
+}
+
+.youtube{
+    min-width: 300px;
+    max-width: 500px;
+    width: 100%;
+    min-height: 185px;
+    max-height: 315px;
+    border: none;
+}
+
+@media screen and (min-width: 450px){
+
+    .YT-trailer, .youtube{
+        min-height: 235px;
+    }
+
 }
 
 .film__soundrack{
@@ -298,25 +324,18 @@ h1, h2, h5{
 
 .film__galerie{
     text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galerie{
+    gap: 10px;
 }
 
 .picture{
     margin: 0;
-}
-
-.galerie__picture--wide{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: stretch;
-    gap: 10px;
-    margin-bottom: .8em;
-}
-
-.galerie__picture--high{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: stretch;
-    gap: 10px;
 }
 
 .film__galerie--img{
@@ -363,6 +382,7 @@ h1, h2, h5{
     font-size: 1em;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    padding-bottom: 1em;
 }
 
 .archiv__obsah a{
@@ -398,8 +418,8 @@ h1, h2, h5{
     padding: 1em;
     background-repeat: no-repeat;
     background-color: #404040;
-    border-bottom: 1px solid var(--Seda);
-    border-top: 1px solid var(--Seda);
+    border-bottom: 1px solid var(--Sediva);
+    border-top: 1px solid var(--Sediva);
 }
 
 .archiv__Pripad-ztracenych-nuzek, .archiv__The-scissors-case{
@@ -411,7 +431,7 @@ h1, h2, h5{
     padding: 1em;
     background-repeat: no-repeat;
     background-color: #535353;
-    border-bottom: 1px solid var(--Seda);
+    border-bottom: 1px solid var(--Sediva);
 }
 
 .archiv__Vzestup-zmijozela{
@@ -434,8 +454,8 @@ h1, h2, h5{
     padding: 1em;
     background-repeat: no-repeat;
     background-color: #414141;
-    border-top: 1px solid var(--Seda);
-    border-bottom: 1px solid var(--Seda);
+    border-top: 1px solid var(--Sediva);
+    border-bottom: 1px solid var(--Sediva);
 }
 
 .archiv__Tri-bratri{
@@ -447,7 +467,7 @@ h1, h2, h5{
     padding: 1em;
     background-repeat: no-repeat;
     background-color: #554F48;
-    border-bottom: 1px solid var(--Seda);
+    border-bottom: 1px solid var(--Sediva);
 }
 
 .archiv__Tailor-of-Swaffham{
@@ -494,7 +514,7 @@ h1, h2, h5{
     justify-content: center;
     background-color: black;
     padding: .5em;
-    border-top: 1px solid var(--Seda);
+    border-top: 1px solid var(--Sediva);
 }
 
 .footer__logo{
@@ -572,6 +592,12 @@ h1, h2, h5{
         border-bottom: 5px solid var(--Cerna);
         padding-bottom: 0.1em;
     }
+    
+/*Q-ÚVOD*/
+
+    .novinky__blok{
+        max-width: 650px;
+    }
 
 /*Q-FILM*/  
 
@@ -595,16 +621,14 @@ h1, h2, h5{
     .film__plakat{
        min-width: 400px;
        height: 100%;
+       max-width: 450px;
+    }
+
+    .YT-trailer, .youtube{
+        min-height: 315px;
+        max-width: 560px;
     }
     
-    .YT-desktop{
-        height: 50vh;
-    }
-
-    .film__galerie--img{
-        object-fit: cover;
-    }
-
     .film-o-filmu{
         display: grid;
         justify-content: center;
@@ -617,6 +641,25 @@ h1, h2, h5{
     .film-o-filmu__YT-desktop{
         min-width: 350px;
         min-height: 195px;
+    }
+
+    .film__galerie--img{
+        object-fit: cover;
+    }
+
+    .galerie__picture--wide{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: stretch;
+        gap: 10px;
+        margin-bottom: .8em;
+    }
+    
+    .galerie__picture--high{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: stretch;
+        gap: 10px;
     }
 
     /*Q-KONTAKT*/
@@ -683,6 +726,10 @@ h1, h2, h5{
         margin: auto 10em;
     }
 
+    .novinky__blok{
+        max-width: 800px;
+    }
+
 /*Q-FILM*/   
 
     .film__sec1--blok{
@@ -690,12 +737,20 @@ h1, h2, h5{
     }
 
     .film__sec1--text1{
-        max-width: 250px;
-        min-width: 230px;
+        min-width: 330px;
     }
 
     .film-o-filmu__blok{
         margin: auto 10em;
+    }
+
+    .YT-trailer{
+        max-height: 315px;
+    }
+
+     .film-o-filmu__YT-desktop{
+        min-width: 400px;
+        min-height: 220px;
     }
 
     .film__soundrack--blok{
@@ -714,6 +769,10 @@ h1, h2, h5{
 
     .archiv__obsah{
         margin: auto 10em;
+    }
+
+    .YT-desktop{
+        min-height: 315px;
     }
 
     .archiv__Tahy-kralu, .archiv__Special, .archiv__Pripad-ztracenych-nuzek, .archiv__Vzestup-zmijozela, .archiv__Hadanky-ve-tme, .archiv__The-scissors-case, .archiv__Tri-bratri, .archiv__Tailor-of-Swaffham{
@@ -759,6 +818,10 @@ h1, h2, h5{
     margin: auto 20em;
 }
 
+.novinky__blok{
+    max-width: 950px;
+}
+
 /*Q-FILM*/   
 
 .film__sec1--blok{
@@ -767,7 +830,7 @@ h1, h2, h5{
 
 .film__sec1--text1{
     font-size: 1.2em;
-    max-width: 400px;
+    min-width: 375px;
 }
 
 .film__plakat-img{
