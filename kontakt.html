@@ -116,19 +116,45 @@
         </a>
         <p class="footer__text-desktop">Vytvořila: Karolína Fučíková</p>
     </footer>
-<script>
-    lightGallery(
-        document.querySelector(".kontakt__Tomas-Machalka--img"), {
-        plugins: [lgZoom, lgThumbnail],
-        selector: ".picture > a",
-    });
-</script>
-<script>
-    lightGallery(
-        document.querySelector(".kontakt__Adela-Putikova--img"), {
-        plugins: [lgZoom, lgThumbnail],
-        selector: ".picture > a",
-    });
-</script>
+    
+    <script>
+        lightGallery(
+            document.querySelector(".kontakt__Tomas-Machalka--img"), {
+            plugins: [lgZoom, lgThumbnail],
+            selector: ".picture > a",
+        });
+    </script>
+
+    <script>
+        lightGallery(
+            document.querySelector(".kontakt__Adela-Putikova--img"), {
+            plugins: [lgZoom, lgThumbnail],
+            selector: ".picture > a",
+        });
+    </script>
+
+    <script>
+        let scrollTop = () => window.scrollY;
+        let scrollState = 0;
+        let navClasses = document.querySelector(".header").classList;
+
+        let scrollDetect = (e) => {
+            var currentScroll = scrollTop();
+            if (scrollTop() === 0) {
+                navClasses.remove('collapse');
+                navClasses.remove('open');
+            } else if (currentScroll > scrollState) {
+                navClasses.remove('open');
+                navClasses.add('collapse');
+            } else {
+                navClasses.remove('collapse');
+                navClasses.add('open');
+            }
+            // Set previous scroll position
+            scrollState = scrollTop();
+        };
+
+        window.addEventListener("scroll", scrollDetect);
+    </script>
 </body>
 </html>

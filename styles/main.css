@@ -56,6 +56,15 @@ h1, h2, h5{
     z-index: 1;
 }
 
+.collapse {
+    transform: translateY(-100%);
+    transition: transform .5s;
+}
+.open {
+    transform: translateY(0%);
+    transition: transform .3s;
+}
+
 .header__blackline{
     display: flex;
     justify-content: space-between;
@@ -324,14 +333,6 @@ h1, h2, h5{
 
 .film__galerie{
     text-align: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.galerie{
-    gap: 10px;
 }
 
 .picture{
@@ -344,12 +345,7 @@ h1, h2, h5{
     object-fit: cover;
 }
 
-.film__galerie--foto{
-    text-align: end;
-    
-}
-
-.film__galerie--foto a{
+.galerie__foto a{
     color: var(--Cerna);
 }
 
@@ -647,6 +643,10 @@ h1, h2, h5{
         object-fit: cover;
     }
 
+    .film__galerie--foto{
+        text-align: right;
+    }
+
     .galerie__picture--wide{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -781,11 +781,7 @@ h1, h2, h5{
 
 /*Q-KONTAKT*/
 
-    .kontakt--text{
-        margin: auto 10em;
-    }
-
-    .kontakt__Tomas-Machalka, .kontakt__Adela-Putikova{
+    .kontakt--text, .kontakt__Tomas-Machalka, .kontakt__Adela-Putikova{
         margin: auto 10em;
     }
 
@@ -865,8 +861,10 @@ h1, h2, h5{
 
 }
 
-/*
-@media screen and (min-width: 1435px){
+@media screen and (min-width: 1435px){  
+
+    .film-o-filmu__YT-desktop{
+        min-height: 270px;
+    }
 
 }
-*/

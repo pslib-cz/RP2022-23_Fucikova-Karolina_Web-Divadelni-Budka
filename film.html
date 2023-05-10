@@ -208,7 +208,7 @@
                     <figure class="picture"><a class="picture__link" href="./images/Skupinovka-divadlo.jpg"><img class="film__galerie--img" src="./images/small/Skupinovka-divadlo.jpg" alt="Skupinová fotka DB v divadle"></a></figure>
                 </div>
             </div>
-            <p class="film__galerie--foto">Foto: <a href="https://www.instagram.com/naty.pattynew/">Natálie Ryšavá</a></p>
+            <div class="film__galerie--foto"><p class="galerie__foto">Foto: <a href="https://www.instagram.com/naty.pattynew/">Natálie Ryšavá</a></p></div>
         </section>
         <section class="film__sponzori">
             <h2>Sponzoři filmu</h2>
@@ -231,15 +231,40 @@
         </a>
         <p class="footer__text-desktop">Vytvořila: Karolína Fučíková</p>
     </footer>
-<script>
-    lightGallery(
-        document.querySelector(".film__galerie"), {
-        plugins: [lgZoom, lgThumbnail, lgAutoplay],
-        speed: 1000,
-        slideShowAutoplay: true,
-        slideShowInterval: 2000,
-        selector: ".picture > a",
-    });
-</script>
+
+    <script>
+        lightGallery(
+            document.querySelector(".film__galerie"), {
+            plugins: [lgZoom, lgThumbnail, lgAutoplay],
+            speed: 1000,
+            slideShowAutoplay: true,
+            slideShowInterval: 2000,
+            selector: ".picture > a",
+        });
+    </script>
+
+    <script>
+        let scrollTop = () => window.scrollY;
+        let scrollState = 0;
+        let navClasses = document.querySelector(".header").classList;
+
+        let scrollDetect = (e) => {
+            var currentScroll = scrollTop();
+            if (scrollTop() === 0) {
+                navClasses.remove('collapse');
+                navClasses.remove('open');
+            } else if (currentScroll > scrollState) {
+                navClasses.remove('open');
+                navClasses.add('collapse');
+            } else {
+                navClasses.remove('collapse');
+                navClasses.add('open');
+            }
+            // Set previous scroll position
+            scrollState = scrollTop();
+        };
+
+        window.addEventListener("scroll", scrollDetect);
+    </script>
 </body>
 </html>
