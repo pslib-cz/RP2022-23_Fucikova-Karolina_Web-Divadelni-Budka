@@ -18,6 +18,14 @@ h1, h2, h5{
     font-weight: 400;
 }
 
+dt{
+    margin: .5em 0;
+}
+
+dd {
+    margin: 0;
+}
+
 .nadpis-h1{
     text-align: center;
     padding-top: .2em;
@@ -264,7 +272,7 @@ h1, h2, h5{
 .film__film-o-filmu{
     text-align: center;
     padding: 1em;
-    background-image: linear-gradient(#ffffff, #dadada, #949494, #868686, #5c5c5c, #3d3d3d, #1a1a1a, #000000);
+    background-image: linear-gradient(#ffffff, #dadada, #c4c4c4, #aaaaaa, #868686, #616161, #4e4e4e, #3a3a3a, #313131, #181818, #000000);
 }
 
 .youtube{
@@ -395,10 +403,6 @@ h1, h2, h5{
     padding: 1em;
     background-repeat: no-repeat;
     background-color: #2A1C0D;
-}
-
-.archiv__obsazeni{
-    margin-bottom: 1em;
 }
 
 .archiv__obsazeni p{
