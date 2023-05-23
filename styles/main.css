@@ -199,6 +199,12 @@ dd {
 }
 
 /*SWIPER*/
+/*
+.swiper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
 
 .dot {
     padding: 0;
@@ -233,7 +239,7 @@ dd {
 /*FILM*/
 
 .film__sec1{
-    background-image: linear-gradient(#5a310b, #643e15, #6b4319, #523210, #744a28, #5a310b, #643e15, #6b4319, #130D06);
+    background-image: linear-gradient(160deg, #5a310b, #643e15, #6b4319, #523210, #744a28, #5a310b, #643e15, #6b4319, #130D06);
     color: var(--Bila);
     text-align: center;
     padding-top: 1em;
@@ -369,6 +375,10 @@ dd {
 
 .film__galerie{
     text-align: center;
+}
+
+.galerie__picture--high{
+    display: none;
 }
 
 .picture{
@@ -664,6 +674,10 @@ dd {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+    }
+
+    .galerie > .swiper-button-prev, .galerie > .swiper-button-next, .film-o-filmu > .swiper-button-prev, .film-o-filmu > .swiper-button-next{
+        display: none;
     }
 
     .film-o-filmu__YT-desktop{

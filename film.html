@@ -20,7 +20,53 @@
 	<script src="./lightgall/plugins/zoom/lg-zoom.min.js"></script>
 	<script src="./lightgall/plugins/autoplay/lg-autoplay.min.js"></script>
     <script src="./hamburger.js"></script>
+    <script src="./slider.js"></script>
     <title>Divadelní Budka | Film</title>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+      
+              const swiper = new Swiper(".swiper", {
+  
+          loop: true,
+          speed: 600,
+          effect: "slide", //'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'cards'
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+          },
+          autoplay: {
+            delay: 2000,
+            //pouseOnMouseEnter: false,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            hideOnClick: true,
+          },
+  
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            bulletElement: "a",
+            bulletClass: "swiper-pagination-bullet dot",
+          },
+  
+          scrollbar: {
+            //el: '.swiper-scrollbar',
+            el: null,
+            draggable: true
+          },
+
+          breakpoints: {
+          768: {
+            slidesPerView: 0,
+          }
+        }
+        });
+  
+        document.querySelector("#next-slide").onclick = () => swiper.slideNext();
+      </script>
 </head>
     
 <body>
@@ -115,8 +161,8 @@
                     <iframe class="youtube film-o-filmu__YT-desktop" src="https://www.youtube.com/embed/-qnZeE9is2I" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <iframe class="youtube film-o-filmu__YT-desktop" src="https://www.youtube.com/embed/v2xU00d-xVA" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     <iframe class="youtube film-o-filmu__YT-desktop" src="https://www.youtube.com/embed/Kt1VjYiMKFM" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe class="youtube film-o-filmu__YT-desktop" height="180" src="https://www.youtube.com/embed/hgt2LhAul-g" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    <iframe class="youtube film-o-filmu__YT-desktop" height="180" src="https://www.youtube.com/embed/YLL8Po4s208" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="youtube film-o-filmu__YT-desktop" src="https://www.youtube.com/embed/hgt2LhAul-g" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe class="youtube film-o-filmu__YT-desktop" src="https://www.youtube.com/embed/YLL8Po4s208" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -187,26 +233,28 @@
         </section>
         <section class="film__galerie">
             <h2>Galerie</h2>
-            <div class="galerie">
-                <div class="galerie__picture--wide">
-                    <figure class="picture"><a  class="picture__link" href="./images/premiera-filmu.jpg"><img class="film__galerie--img" src="./images/small/premiera-filmu.jpg" alt="Premiéra filmu - Sherlock Holmes: Tahy Králů"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/film1.png"><img class="film__galerie--img" src="./images/small/film1.png" alt="Z filmu: Sherlock hraje na housle"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/film2.png"><img class="film__galerie--img" src="./images/small/film2.png" alt="Z filmu: Doktor Watson je u soudu"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/film3.png"><img class="film__galerie--img" src="./images/small/film3.png" alt="Z filmu: Moriartyho dcera na balkóně"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/film4.png"><img class="film__galerie--img" src="./images/small/film4.png" alt="Z filmu: Sherlock Holmes a Irene Adlerová"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/film5.png"><img class="film__galerie--img" src="./images/small/film5.png" alt="Z filmu: Moriarty a Sherlock Holmes"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/film6.png"><img class="film__galerie--img" src="./images/small/film6.png" alt="Z filmu: Duch"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/Baker-Street.png"><img class="film__galerie--img" src="./images/small/Baker-Street.png" alt="Baker Street"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/nataceni1.jpg"><img class="film__galerie--img" src="./images/small/nataceni1.jpg" alt="Natáčení na liberecké radnici"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/Sherlock-kinematograf.jpg"><img class="film__galerie--img" src="./images/small/Sherlock-kinematograf.jpg" alt="Sherlock a kinematograf"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/nataceni2.jpg"><img class="film__galerie--img" src="./images/small/nataceni2.jpg" alt="Natáčení na liberecké radnici"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/velka-fotka-film.jpg"><img class="film__galerie--img" src="./images/small/velka-fotka-film.jpg" alt="Sherlock Holmes a Irene Adlerová"></a></figure>
+            <div class="galerie swiper">
+                <div class="galerie__picture--wide slider__content swiper-wrapper">
+                    <figure class="picture slider__item swiper-slide"><a  class="picture__link slider-view slider-view__front" href="./images/premiera-filmu.jpg"><img class="film__galerie--img" src="./images/small/premiera-filmu.jpg" alt="Premiéra filmu - Sherlock Holmes: Tahy Králů"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/film1.png"><img class="film__galerie--img" src="./images/small/film1.png" alt="Z filmu: Sherlock hraje na housle"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/film2.png"><img class="film__galerie--img" src="./images/small/film2.png" alt="Z filmu: Doktor Watson je u soudu"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/film3.png"><img class="film__galerie--img" src="./images/small/film3.png" alt="Z filmu: Moriartyho dcera na balkóně"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/film4.png"><img class="film__galerie--img" src="./images/small/film4.png" alt="Z filmu: Sherlock Holmes a Irene Adlerová"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/film5.png"><img class="film__galerie--img" src="./images/small/film5.png" alt="Z filmu: Moriarty a Sherlock Holmes"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/film6.png"><img class="film__galerie--img" src="./images/small/film6.png" alt="Z filmu: Duch"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/Baker-Street.png"><img class="film__galerie--img" src="./images/small/Baker-Street.png" alt="Baker Street"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/nataceni1.jpg"><img class="film__galerie--img" src="./images/small/nataceni1.jpg" alt="Natáčení na liberecké radnici"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/Sherlock-kinematograf.jpg"><img class="film__galerie--img" src="./images/small/Sherlock-kinematograf.jpg" alt="Sherlock a kinematograf"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/nataceni2.jpg"><img class="film__galerie--img" src="./images/small/nataceni2.jpg" alt="Natáčení na liberecké radnici"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/velka-fotka-film.jpg"><img class="film__galerie--img" src="./images/small/velka-fotka-film.jpg" alt="Sherlock Holmes a Irene Adlerová"></a></figure>
                 </div>
-                <div class="galerie__picture--high">
-                    <figure class="picture"><a class="picture__link" href="./images/nataceni3.jpg"><img class="film__galerie--img" src="./images/small/nataceni3.jpg" alt="Natáčení u Valdštejnských domků"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/nataceni4.jpg"><img class="film__galerie--img" src="./images/small/nataceni4.jpg" alt="Kameraman Adam"></a></figure>
-                    <figure class="picture"><a class="picture__link" href="./images/Skupinovka-divadlo.jpg"><img class="film__galerie--img" src="./images/small/Skupinovka-divadlo.jpg" alt="Skupinová fotka DB v divadle"></a></figure>
+                <div class="galerie__picture--high slider__content swiper-wrapper">
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/nataceni3.jpg"><img class="film__galerie--img" src="./images/small/nataceni3.jpg" alt="Natáčení u Valdštejnských domků"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/nataceni4.jpg"><img class="film__galerie--img" src="./images/small/nataceni4.jpg" alt="Kameraman Adam"></a></figure>
+                    <figure class="picture slider__item swiper-slide"><a class="picture__link slider-view slider-view__front" href="./images/Skupinovka-divadlo.jpg"><img class="film__galerie--img" src="./images/small/Skupinovka-divadlo.jpg" alt="Skupinová fotka DB v divadle"></a></figure>
                 </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
             </div>
             <div class="film__galerie--foto"><p class="galerie__foto">Foto: <a href="https://www.instagram.com/naty.pattynew/">Natálie Ryšavá</a></p></div>
         </section>
