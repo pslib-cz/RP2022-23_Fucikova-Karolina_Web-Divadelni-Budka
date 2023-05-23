@@ -1,8 +1,20 @@
+@import url(https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css);
+
 :root{
     --Cerna: #000000;
     --Bila: #FFFFFF;
     --Seda: #D9D9D9;
     --Sediva: #797979;
+    --primary: #ffffff;
+    --light: #ffffff;
+    --dark: #2b2b2b;
+    --border: #cccccc;
+    --initial-clip-path: 0%;
+    --swiper-theme-color: var(--primary);
+    --swiper-pagination-bullet-size: 1em;
+    --swiper-pagination-bullet-inactive-color: #ffffff;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+    --swiper-pagination-progressbar-bg-color: #ea770354;
 }
 
 
@@ -61,7 +73,7 @@ dd {
     left: 0;
     right: 0;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 .collapse {
@@ -185,6 +197,22 @@ dd {
     border-radius: 50px;
     overflow: hidden;
 }
+
+/*SWIPER*/
+
+.dot {
+    padding: 0;
+    display: inline-block;
+    width: var(--swiper-pagination-bullet-size, 1em);
+    height: var(--swiper-pagination-bullet-size, 1em);
+    border: 3px solid var(--swiper-theme-color, --primary);
+    background-color: unset;
+    border-radius: 50%;
+  }
+
+  .dot:hover{
+    background-color: var(--primary);
+  }
 
 .uvod__text{
     text-align: center;

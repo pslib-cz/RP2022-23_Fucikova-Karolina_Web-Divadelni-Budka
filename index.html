@@ -13,10 +13,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./lightgall/css/lg-zoom.css">
 	<link rel="stylesheet" href="./lightgall/css/lightgallery.css">
+    <link rel="stylesheet" href="./styles/swiper.css">
 	<script src="./lightgall/lightgallery.min.js"></script>
 	<script src="./lightgall/plugins/zoom/lg-zoom.min.js"></script>
     <script src="./hamburger.js"></script>
+    <script src="./slider.js"></script>
     <title>Divadelní Budka | Úvod</title>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+      
+              const swiper = new Swiper(".swiper", {
+  
+          loop: true,
+          speed: 600,
+          effect: "slide", //'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'cards'
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+          },
+          autoplay: {
+            delay: 2000,
+            //pouseOnMouseEnter: false,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            hideOnClick: true,
+          },
+  
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            bulletElement: "a",
+            bulletClass: "swiper-pagination-bullet dot",
+          },
+  
+          scrollbar: {
+            //el: '.swiper-scrollbar',
+            el: null,
+            draggable: true
+          },
+        });
+  
+        document.querySelector("#next-slide").onclick = () => swiper.slideNext();
+      </script>
 </head>
 <body>
     <header class="header">
@@ -68,15 +109,19 @@
         </div>
     </header>
     <main class="uvod">
-        <div class="novinky">
-            <a class="novinky__blok" href="./archiv.html#Tailor-of-Swaffham"><img class="uvod__novinky--img" src="./images/small/Tailor-of-Swaffham.png" alt="Tailor of Swaffham"></a>
-            <div class="fornow">
-                <a class="novinky__blok" href="./archiv.html#Tri-bratri"><img class="uvod__novinky--img" src="./images/small/Pribeh-tri-bratri.jpg" alt="Příběh tří bratří"></a>
-                <a class="novinky__blok" href="./archiv.html#Pripad-ztracenych-nuzek"><img class="uvod__novinky--img" src="./images/small/Pripad-ztracenych-nuzek.jpg" alt="Případ ztracených nůžek"></a>
-                <a class="novinky__blok" href="./archiv.html#Vzestup-zmijozela"><img class="uvod__novinky--img" src="./images/small/vzestup-zmijozela.png" alt="Vzestup Zmijozela"></a>
-                <a class="novinky__blok" href="./archiv.html#Hadanky-ve-tme"><img class="uvod__novinky--img" src="./images/small/hadanky-ve-tme.jpg" alt="Hádanky ve tmě"></a>
-                <a class="novinky__blok" href="./archiv.html#Tahy-kralu"><img class="uvod__novinky--img" src="./images/velka-fotka-film.jpg" alt="Sherlock Holmes - film"></a>
+        <div class="novinky swiper">
+            <div class="slider__content swiper-wrapper">
+                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Tailor-of-Swaffham"><img class="uvod__novinky--img" src="./images/small/Tailor-of-Swaffham.png" alt="Tailor of Swaffham"></a></div>
+                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Tri-bratri"><img class="uvod__novinky--img" src="./images/small/Pribeh-tri-bratri.jpg" alt="Příběh tří bratří"></a></div>
+                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Pripad-ztracenych-nuzek"><img class="uvod__novinky--img" src="./images/small/Pripad-ztracenych-nuzek.jpg" alt="Případ ztracených nůžek"></a></div>
+                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Vzestup-zmijozela"><img class="uvod__novinky--img" src="./images/small/vzestup-zmijozela.png" alt="Vzestup Zmijozela"></a></div>
+                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Hadanky-ve-tme"><img class="uvod__novinky--img" src="./images/small/hadanky-ve-tme.jpg" alt="Hádanky ve tmě"></a></div>
+                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Tahy-kralu"><img class="uvod__novinky--img" src="./images/small/novinky-velka-fotka-film.jpg" alt="Sherlock Holmes - film"></a></div>
             </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
         </div>
         <div class="uvod__text">
             <h2 class="uvod__h2">Kdo jsme?</h2>
