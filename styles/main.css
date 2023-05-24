@@ -26,7 +26,7 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h5{
+h1, h2{
     font-weight: 400;
 }
 
@@ -60,10 +60,6 @@ dd {
 .odkaz{
     color: var(--Bila);
     border-bottom: 1px solid var(--Bila);
-}
-
-.fornow{
-    display: none;
 }
 
 /*HEADER*/
@@ -121,6 +117,13 @@ dd {
     text-align: left;
     border-bottom: 2px solid var(--Seda);
     padding: .8em 0 .5em 1em;
+}
+
+@media screen and (max-width: 768px){
+
+    .this-page{
+    font-weight: bolder;
+    }
 }
 
 /*HAMBURGER MENU*/
@@ -419,6 +422,16 @@ dd {
 
 /*ARCHIV*/
 
+.archiv__misto-konani{
+    display: block;
+    font-size: .83em;
+    margin-top: 1.67em;
+    margin-bottom: 1.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: 400;
+}
+
 .archiv__obsah{
     display: flex;
     font-size: 1em;
@@ -519,26 +532,30 @@ dd {
     background-color: #1B1D13;
 }
 
-/*KONTAKT*/
+.archiv .archiv__text{
+    text-align: left;
+}
 
-.kontakt--text{
+/*O NÁS*/
+
+.o-nas--text{
     text-align: center;
 }
 
-.kontakt__Adela-Putikova, .kontakt__Tomas-Machalka{
+.o-nas__Adela-Putikova, .o-nas__Tomas-Machalka{
     text-align: center;
 }
 
-.kontakt__osoby--text{
+.o-nas__osoby--text{
     padding: 0 1em 1em 1em;
     margin: 0;
 }
 
-.kontakt__Adela-Putikova--text, .kontakt__Tomas-Machalka--text{
-    max-width: 550px;
+.o-nas__Adela-Putikova .o-nas__osoby--text, .o-nas__Tomas-Machalka .o-nas__osoby--text{
+    text-align: left;
 }
 
-.kontakt__picture{
+.o-nas__picture{
     width: 100%;
     padding: 0;
     margin: 0;
@@ -708,9 +725,9 @@ dd {
         gap: 10px;
     }
 
-    /*Q-KONTAKT*/
+    /*Q-O NÁS*/
 
-    .kontakt__Tomas-Machalka{
+    .o-nas__Tomas-Machalka{
         display: flex;
         justify-content: center;
         flex-direction: row-reverse;
@@ -718,12 +735,12 @@ dd {
         margin: auto 1em;
     }
 
-    .kontakt__picture{
+    .o-nas__picture{
         min-width: 300px;
         max-width: 500px;
     }
 
-    .kontakt__Adela-Putikova{
+    .o-nas__Adela-Putikova{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -825,9 +842,9 @@ dd {
         padding: 1em 10em;
     }
 
-/*Q-KONTAKT*/
+/*Q-O NÁS*/
 
-    .kontakt--text, .kontakt__Tomas-Machalka, .kontakt__Adela-Putikova{
+    .o-nas--text, .o-nas__Tomas-Machalka, .o-nas__Adela-Putikova{
         margin: auto 10em;
     }
 
@@ -893,10 +910,14 @@ dd {
     padding: 1em 20em;
 }
 
-/*Q-KONTAKT*/
+/*Q-O NÁS*/
 
-.kontakt--text, .kontakt__Tomas-Machalka, .kontakt__Adela-Putikova{
+.o-nas--text, .o-nas__Tomas-Machalka, .o-nas__Adela-Putikova{
     margin: auto 20em;
+}
+
+.o-nas__Adela-Putikova--text, .o-nas__Tomas-Machalka--text{
+    max-width: 550px;
 }
 
 /*Q-FOOTER*/
