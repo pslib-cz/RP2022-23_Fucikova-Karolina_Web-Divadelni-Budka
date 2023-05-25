@@ -242,7 +242,7 @@ dd {
 /*FILM*/
 
 .film__sec1{
-    background-image: linear-gradient(160deg, #5a310b, #643e15, #6b4319, #523210, #744a28, #5a310b, #643e15, #6b4319, #130D06);
+    background-image: linear-gradient(160deg, #966128, #643e15, #6b4319, #523210, #553317, #5a310b, #643e15, #533413, #130D06);
     color: var(--Bila);
     text-align: center;
     padding-top: 1em;
@@ -555,6 +555,10 @@ dd {
     text-align: left;
 }
 
+.o-nas .osoby__text--margin{
+    padding-bottom: 0.5em;
+}
+
 .o-nas__picture{
     width: 100%;
     padding: 0;
@@ -650,7 +654,7 @@ dd {
     
 /*Q-ÚVOD*/
 
-    .novinky__blok{
+    .novinky{
         max-width: 650px;
     }
 
