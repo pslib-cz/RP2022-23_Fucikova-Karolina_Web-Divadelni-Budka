@@ -695,7 +695,7 @@ dd {
         justify-items: center;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
-        gap: 10px;
+        overflow-x: hidden;
     }
 
     .galerie > .swiper-button-prev, .galerie > .swiper-button-next, .film-o-filmu > .swiper-button-prev, .film-o-filmu > .swiper-button-next{
