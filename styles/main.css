@@ -205,11 +205,9 @@ dd {
 /*SWIPER*/
 /*
 .swiper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}*/
-
+    height: fit-content;
+}
+*/
 .dot {
     padding: 0;
     display: inline-block;
@@ -313,6 +311,13 @@ dd {
     background-image: linear-gradient(#ffffff, #dadada, #c4c4c4, #aaaaaa, #868686, #616161, #4e4e4e, #3a3a3a, #313131, #181818, #000000);
 }
 
+.film-o-filmu{
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    gap: 10px;
+}
+
 .youtube{
     min-width: 300px;
     max-width: 500px;
@@ -377,10 +382,6 @@ dd {
 
 .film__galerie{
     text-align: center;
-}
-
-.galerie__picture--high{
-    display: none;
 }
 
 .picture{
@@ -721,14 +722,14 @@ dd {
         gap: 10px;
         margin-bottom: .8em;
     }
-    
+    /*
     .galerie__picture--high{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         align-items: stretch;
         gap: 10px;
     }
-
+*/
 /*Q-O NÁS*/
 
     .o-nas__Tomas-Machalka{
