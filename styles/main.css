@@ -100,6 +100,26 @@ dd {
     color: white;
 }
 
+.header__text{
+    color: var(--Cerna);
+    min-width: 250px;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.navbar__logo{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.header__logo{
+    width: 50px;
+    padding: 0;
+    margin: 0;
+    object-fit: contain;
+}
+
 /*NAVIGACE*/
 
 .nav-link{
