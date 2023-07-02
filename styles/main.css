@@ -472,6 +472,17 @@ dd {
     border: none;
 }
 
+.archiv__RUR{
+    text-align: center;
+    color: var(--Bila);
+    background-image: url(../images/RUR_backgrond.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 1em;
+    background-repeat: no-repeat;
+    background-color: #505050;
+}
+
 .archiv__Tahy-kralu{
     text-align: center;
     color: var(--Bila);
@@ -880,7 +891,7 @@ dd {
         min-height: 315px;
     }
 
-    .archiv__Tahy-kralu, .archiv__Special, .archiv__Pripad-ztracenych-nuzek, .archiv__Vzestup-zmijozela, .archiv__Hadanky-ve-tme, .archiv__The-scissors-case, .archiv__Tri-bratri, .archiv__Tailor-of-Swaffham{
+    .archiv__RUR, .archiv__Tahy-kralu, .archiv__Special, .archiv__Pripad-ztracenych-nuzek, .archiv__Vzestup-zmijozela, .archiv__Hadanky-ve-tme, .archiv__The-scissors-case, .archiv__Tri-bratri, .archiv__Tailor-of-Swaffham{
         padding: 1em 10em;
     }
 
@@ -951,7 +962,7 @@ dd {
     margin: auto 20em;
 }
 
-.archiv__Tahy-kralu, .archiv__Special, .archiv__Pripad-ztracenych-nuzek, .archiv__Vzestup-zmijozela, .archiv__Hadanky-ve-tme, .archiv__The-scissors-case, .archiv__Tri-bratri, .archiv__Tailor-of-Swaffham{
+.archiv__RUR, .archiv__Tahy-kralu, .archiv__Special, .archiv__Pripad-ztracenych-nuzek, .archiv__Vzestup-zmijozela, .archiv__Hadanky-ve-tme, .archiv__The-scissors-case, .archiv__Tri-bratri, .archiv__Tailor-of-Swaffham{
     padding: 1em 20em;
 }
 
