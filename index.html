@@ -1,180 +1,264 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Spolek Divadelní Budka dělá nezávislé divadlo od 15. března 2016. Vrcholem jejich tvorby byl film Sherlock Holmes: Tahy Králů v roce 2022.">
-    <link rel="shortcut icon" href="logo/DB-logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./styles/normalize.css">
-    <link rel="stylesheet" href="./styles/main.css">
-    <link rel="stylesheet" href="./styles/hamburger.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./lightgall/css/lg-zoom.css">
-	<link rel="stylesheet" href="./lightgall/css/lightgallery.css">
-	<script src="./lightgall/lightgallery.min.js"></script>
-	<script src="./lightgall/plugins/zoom/lg-zoom.min.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Spolek Divadelní Budka dělá nezávislé divadlo od 15. března 2016. Vrcholem jejich tvorby byl film Sherlock Holmes: Tahy Králů v roce 2022."
+    />
+    <link rel="canonical" href="http://www.divadelni-budka.site/index.html" />
+    <link rel="canonical" href="http://www.divadelni-budka.site/" />
+    <link rel="canonical" href="https://www.divadelni-budka.site/index.html" />
+    <link rel="shortcut icon" href="logo/DB-logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="stylesheet" href="./styles/hamburger.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./lightgall/css/lg-zoom.css" />
+    <link rel="stylesheet" href="./lightgall/css/lightgallery.css" />
+    <script src="./lightgall/lightgallery.min.js"></script>
+    <script src="./lightgall/plugins/zoom/lg-zoom.min.js"></script>
     <script src="./hamburger.js"></script>
     <script src="./slider.js"></script>
     <title>Divadelní Budka | Úvod</title>
     <script type="module">
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
-      
-              const swiper = new Swiper(".swiper", {
-  
-          loop: true,
-          speed: 600,
-          effect: "slide",
-          keyboard: {
-            enabled: true,
-            onlyInViewport: false,
-          },
-          
-          autoplay: {
-            delay: 3500,
-          },
+      import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js';
 
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-            hideOnClick: true,
-          },
-  
-          pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-            bulletElement: "a",
-            bulletClass: "swiper-pagination-bullet dot",
-          },
-  
-          scrollbar: {
-            el: null,
-            draggable: true
-          },
-        });
-  
-      </script>
-</head>
-<body>
+      const swiper = new Swiper('.swiper', {
+        loop: true,
+        speed: 600,
+        effect: 'slide',
+        keyboard: {
+          enabled: true,
+          onlyInViewport: false,
+        },
+
+        autoplay: {
+          delay: 3500,
+        },
+
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+          hideOnClick: true,
+        },
+
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'bullets',
+          clickable: true,
+          bulletElement: 'a',
+          bulletClass: 'swiper-pagination-bullet dot',
+        },
+
+        scrollbar: {
+          el: null,
+          draggable: true,
+        },
+      });
+    </script>
+  </head>
+  <body>
     <header class="header">
-        <div class="header__blackline">
-            <a class="header__email" href="mailto://divadelni.budka@seznam.cz">
-                <img src="./logo/email-logo.svg" alt="email">
-                <p class="header__email--text">divadelni.budka@seznam.cz</p>
-            </a>
+      <div class="header__blackline">
+        <a class="header__email" href="mailto://divadelni.budka@seznam.cz">
+          <img src="./logo/email-logo.svg" alt="email" />
+          <p class="header__email--text">divadelni.budka@seznam.cz</p>
+        </a>
         <div class="header__social-networks">
-            <a href="https://www.facebook.com/Divadelnibudka" target="_blank">
-                <img src="./logo/facebook-logo.svg" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/divadelni.budka/" target="_blank">
-                <img src="./logo/instagram-logo.svg" alt="Instagram">
-            </a>
-            <a href="https://www.youtube.com/@divadelnibudka9153" target="_blank">
-                <img src="./logo/youtube-logo.svg" alt="YouTube">
-            </a>
+          <a href="https://www.facebook.com/Divadelnibudka" target="_blank">
+            <img src="./logo/facebook-logo.svg" alt="Facebook" />
+          </a>
+          <a href="https://www.instagram.com/divadelni.budka/" target="_blank">
+            <img src="./logo/instagram-logo.svg" alt="Instagram" />
+          </a>
+          <a href="https://www.youtube.com/@divadelnibudka9153" target="_blank">
+            <img src="./logo/youtube-logo.svg" alt="YouTube" />
+          </a>
         </div>
-    </div>
-    <div class="header__navigace">
+      </div>
+      <div class="header__navigace">
         <div class="hamburger-row">
-            <a class="navbar__logo">
-                <img class="header__logo" src="./logo/DB-logo.png" alt="logo DB">
-                <h1 class="header__text">Divadelní Budka</h1>
-            </a>
-            <a href="javascript:void(0)" class="hamburger hamburger-btn hamburger-zone">
-                <span></span>
-                <span></span>
-                <span></span>
-            </a>
+          <a class="navbar__logo">
+            <img class="header__logo" src="./logo/DB-logo.png" alt="logo DB" />
+            <h1 class="header__text">Divadelní Budka</h1>
+          </a>
+          <a
+            href="javascript:void(0)"
+            class="hamburger hamburger-btn hamburger-zone"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
         </div>
-            <nav class="navbar hamburger-nav hamburger-zone">
-                <menu class="nav__pages">
-                    <li class="nav-item this-page">
-                        <a class="nav-link" href="./index.html">ÚVOD</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./film.html">FILM</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./archiv.html">ARCHIV</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./o-nas.html">O NÁS</a>
-                    </li>
-                </menu>
-            </nav>
-        </div>
+        <nav class="navbar hamburger-nav hamburger-zone">
+          <menu class="nav__pages">
+            <li class="nav-item this-page">
+              <a class="nav-link" href="./index.html">ÚVOD</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./film.html">FILM</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./archiv.html">ARCHIV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./o-nas.html">O NÁS</a>
+            </li>
+          </menu>
+        </nav>
+      </div>
     </header>
     <main class="uvod">
-        <div class="novinky swiper">
-            <div class="slider__content swiper-wrapper">
-                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#RUR"><img class="uvod__novinky--img" src="./images/small/RUR.jpg" alt="RUR"></a></div>
-                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Tailor-of-Swaffham"><img class="uvod__novinky--img" src="./images/small/Tailor-of-Swaffham.png" alt="Tailor of Swaffham"></a></div>
-                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Tri-bratri"><img class="uvod__novinky--img" src="./images/small/Pribeh-tri-bratri.jpg" alt="Příběh tří bratří"></a></div>
-                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Pripad-ztracenych-nuzek"><img class="uvod__novinky--img" src="./images/small/Pripad-ztracenych-nuzek.jpg" alt="Případ ztracených nůžek"></a></div>
-                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Vzestup-zmijozela"><img class="uvod__novinky--img" src="./images/small/vzestup-zmijozela.png" alt="Vzestup Zmijozela"></a></div>
-                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Hadanky-ve-tme"><img class="uvod__novinky--img" src="./images/small/hadanky-ve-tme.jpg" alt="Hádanky ve tmě"></a></div>
-                <div class="slider__item swiper-slide"><a class="novinky__blok slider-view slider-view__front" href="./archiv.html#Tahy-kralu"><img class="uvod__novinky--img" src="./images/small/novinky-velka-fotka-film.jpg" alt="Sherlock Holmes - film"></a></div>
-            </div>
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-scrollbar"></div>
+      <div class="novinky swiper">
+        <div class="slider__content swiper-wrapper">
+          <div class="slider__item swiper-slide">
+            <a
+              class="novinky__blok slider-view slider-view__front"
+              href="./archiv.html#RUR"
+              ><img
+                class="uvod__novinky--img"
+                src="./images/small/RUR.jpg"
+                alt="RUR"
+            /></a>
+          </div>
+          <div class="slider__item swiper-slide">
+            <a
+              class="novinky__blok slider-view slider-view__front"
+              href="./archiv.html#Tailor-of-Swaffham"
+              ><img
+                class="uvod__novinky--img"
+                src="./images/small/Tailor-of-Swaffham.png"
+                alt="Tailor of Swaffham"
+            /></a>
+          </div>
+          <div class="slider__item swiper-slide">
+            <a
+              class="novinky__blok slider-view slider-view__front"
+              href="./archiv.html#Tri-bratri"
+              ><img
+                class="uvod__novinky--img"
+                src="./images/small/Pribeh-tri-bratri.jpg"
+                alt="Příběh tří bratří"
+            /></a>
+          </div>
+          <div class="slider__item swiper-slide">
+            <a
+              class="novinky__blok slider-view slider-view__front"
+              href="./archiv.html#Pripad-ztracenych-nuzek"
+              ><img
+                class="uvod__novinky--img"
+                src="./images/small/Pripad-ztracenych-nuzek.jpg"
+                alt="Případ ztracených nůžek"
+            /></a>
+          </div>
+          <div class="slider__item swiper-slide">
+            <a
+              class="novinky__blok slider-view slider-view__front"
+              href="./archiv.html#Vzestup-zmijozela"
+              ><img
+                class="uvod__novinky--img"
+                src="./images/small/vzestup-zmijozela.png"
+                alt="Vzestup Zmijozela"
+            /></a>
+          </div>
+          <div class="slider__item swiper-slide">
+            <a
+              class="novinky__blok slider-view slider-view__front"
+              href="./archiv.html#Hadanky-ve-tme"
+              ><img
+                class="uvod__novinky--img"
+                src="./images/small/hadanky-ve-tme.jpg"
+                alt="Hádanky ve tmě"
+            /></a>
+          </div>
+          <div class="slider__item swiper-slide">
+            <a
+              class="novinky__blok slider-view slider-view__front"
+              href="./archiv.html#Tahy-kralu"
+              ><img
+                class="uvod__novinky--img"
+                src="./images/small/novinky-velka-fotka-film.jpg"
+                alt="Sherlock Holmes - film"
+            /></a>
+          </div>
         </div>
-        <div class="uvod__text">
-            <h2 class="uvod__h2">Kdo jsme?</h2>
-            <p class="o-nas__osoby--text">
-                Jsme skupina divadelních nadšenců, kteří si jednoho dne řekli, že naše nadšení a zápal myslíme vážně. Začali jsme hrát různá divadelní představení na základní škole a postupně se z nás stal spolek Divadelní Budka. Začínali jsme s divadelními adaptacemi již existujících příběhů. V září 2018 jsme ale začali vymýšlet svá vlastní divadelní dobrodružství, která odstartoval náš Sherlock Holmes. Největší projekt, který jsme zatím vytvořili, je krátkometrážní film Sherlock Holmes: Tahy Králů, který se v květnu roku 2022 dočkal slavnostní premiéry. 
-                Tenhle web slouží jako takový rozcestník, na kterém můžete najít vše hezky přehledně!
-            </p>
-        </div>
-        <figure class="uvod__img">
-                <a class="picture" href="./images/Skupinovka-DB.jpg"><img src="./images/Skupinovka-DB.jpg" alt="Divadelní Budka 2022"></a>
-                <figcaption class="uvod__img-popisek">Natáčení Sherlocka na liberecké radnici, 2022</figcaption>
-        </figure>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-scrollbar"></div>
+      </div>
+      <div class="uvod__text">
+        <h2 class="uvod__h2">Kdo jsme?</h2>
+        <p class="o-nas__osoby--text">
+          Jsme skupina divadelních nadšenců, kteří si jednoho dne řekli, že naše
+          nadšení a zápal myslíme vážně. Začali jsme hrát různá divadelní
+          představení na základní škole a postupně se z nás stal spolek
+          Divadelní Budka. Začínali jsme s divadelními adaptacemi již
+          existujících příběhů. V září 2018 jsme ale začali vymýšlet svá vlastní
+          divadelní dobrodružství, která odstartoval náš Sherlock Holmes.
+          Největší projekt, který jsme zatím vytvořili, je krátkometrážní film
+          Sherlock Holmes: Tahy Králů, který se v květnu roku 2022 dočkal
+          slavnostní premiéry. Tenhle web slouží jako takový rozcestník, na
+          kterém můžete najít vše hezky přehledně!
+        </p>
+      </div>
+      <figure class="uvod__img">
+        <a class="picture" href="./images/Skupinovka-DB.jpg"
+          ><img src="./images/Skupinovka-DB.jpg" alt="Divadelní Budka 2022"
+        /></a>
+        <figcaption class="uvod__img-popisek">
+          Natáčení Sherlocka na liberecké radnici, 2022
+        </figcaption>
+      </figure>
     </main>
     <footer class="footer">
-        <a href="./index.html">
-            <div class="footer__year">
-                <img src="./logo/DB-logo.png" alt="logo DB" class="footer__logo">
-                <p class="footer__text">&copy;2016-2023 Divadelní Budka</p>
-            </div>
-        </a>
-        <p class="footer__text-desktop">Vytvořila: Karolína Fučíková</p>
+      <a href="./index.html">
+        <div class="footer__year">
+          <img src="./logo/DB-logo.png" alt="logo DB" class="footer__logo" />
+          <p class="footer__text">&copy;2016-2023 Divadelní Budka</p>
+        </div>
+      </a>
+      <p class="footer__text-desktop">Vytvořila: Karolína Fučíková</p>
     </footer>
 
     <script>
-        lightGallery(
-            document.querySelector(".uvod__img"), {
-            plugins: [lgZoom],
-            selector: ".uvod__img > a",
-        });
+      lightGallery(document.querySelector('.uvod__img'), {
+        plugins: [lgZoom],
+        selector: '.uvod__img > a',
+      });
     </script>
-    
+
     <script>
-        let scrollTop = () => window.scrollY;
-        let scrollState = 0;
-        let navClasses = document.querySelector(".header").classList;
+      let scrollTop = () => window.scrollY;
+      let scrollState = 0;
+      let navClasses = document.querySelector('.header').classList;
 
-        let scrollDetect = (e) => {
-            var currentScroll = scrollTop();
-            if (scrollTop() === 0) {
-                navClasses.remove('collapse');
-                navClasses.remove('open');
-            } else if (currentScroll > scrollState) {
-                navClasses.remove('open');
-                navClasses.add('collapse');
-            } else {
-                navClasses.remove('collapse');
-                navClasses.add('open');
-            }
-            // Set previous scroll position
-            scrollState = scrollTop();
-        };
+      let scrollDetect = (e) => {
+        var currentScroll = scrollTop();
+        if (scrollTop() === 0) {
+          navClasses.remove('collapse');
+          navClasses.remove('open');
+        } else if (currentScroll > scrollState) {
+          navClasses.remove('open');
+          navClasses.add('collapse');
+        } else {
+          navClasses.remove('collapse');
+          navClasses.add('open');
+        }
+        // Set previous scroll position
+        scrollState = scrollTop();
+      };
 
-        window.addEventListener("scroll", scrollDetect);
+      window.addEventListener('scroll', scrollDetect);
     </script>
-</body>
+  </body>
 </html>
