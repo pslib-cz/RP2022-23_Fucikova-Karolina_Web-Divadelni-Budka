@@ -79,14 +79,14 @@
           <a href="https://www.instagram.com/divadelni.budka/" target="_blank">
             <img src="./logo/instagram-logo.svg" alt="Instagram" />
           </a>
-          <a href="https://www.youtube.com/@divadelnibudka9153" target="_blank">
+          <a href="https://www.youtube.com/@divadelnibudka" target="_blank">
             <img src="./logo/youtube-logo.svg" alt="YouTube" />
           </a>
         </div>
       </div>
       <div class="header__navigace">
         <div class="hamburger-row">
-          <a class="navbar__logo">
+          <a href="./index.html" class="navbar__logo">
             <img class="header__logo" src="./logo/DB-logo.png" alt="logo DB" />
             <h1 class="header__text">Divadelní Budka</h1>
           </a>
@@ -105,7 +105,7 @@
               <a class="nav-link" href="./index.html">ÚVOD</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./film.html">FILM</a>
+              <a class="nav-link" href="./filmy_menu.html">FILMY</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./archiv.html">ARCHIV</a>
@@ -183,7 +183,7 @@
           <div class="slider__item swiper-slide">
             <a
               class="novinky__blok slider-view slider-view__front"
-              href="./archiv.html#Tahy-kralu"
+              href="./sherlock1.html"
               ><img
                 class="uvod__novinky--img"
                 src="./images/small/novinky-velka-fotka-film.jpg"
@@ -206,7 +206,7 @@
           existujících příběhů. V září 2018 jsme ale začali vymýšlet svá vlastní
           divadelní dobrodružství, která odstartoval náš Sherlock Holmes.
           Největší projekt, který jsme zatím vytvořili, je krátkometrážní film
-          Sherlock Holmes: Tahy králů, který se v květnu roku 2022 dočkal
+          Sherlock Holmes: Tahy Králů, který se v květnu roku 2022 dočkal
           slavnostní premiéry. Tenhle web slouží jako takový rozcestník, na
           kterém můžete najít vše hezky přehledně!
         </p>
@@ -221,10 +221,18 @@
       </figure>
     </main>
     <footer class="footer">
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var currentYear = new Date().getFullYear();
+            document.getElementById('currentYear').innerText = currentYear;
+        });
+    </script>
+
       <a href="./index.html">
         <div class="footer__year">
           <img src="./logo/DB-logo.png" alt="logo DB" class="footer__logo" />
-          <p class="footer__text">&copy;2016-2023 Divadelní Budka</p>
+          <p class="footer__text">&copy;2016–<span id="currentYear"></span> Divadelní Budka</p>
         </div>
       </a>
       <p class="footer__text-desktop">Vytvořila: Karolína Fučíková</p>

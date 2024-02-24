@@ -254,6 +254,13 @@ dd {
     object-fit: cover;
 }
 
+/*Filmy*/
+
+.filmy_picture{
+    min-height: 15em;
+    max-height: 15em;
+}
+
 /*FILM*/
 
 .film__sec1{
@@ -442,6 +449,17 @@ dd {
     object-fit: contain;
     max-width: 200px;
 }
+
+/*Filmy*/
+
+.filmy__obsah{
+    display: flex;
+    font-size: 1em;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-bottom: 1em;
+}
+
 
 /*ARCHIV*/
 
@@ -777,6 +795,20 @@ dd {
         max-width: 560px;
     }
 
+/*FILMY*/
+
+.filmy_picture {
+    min-height: 10em;
+    max-height: 15em;
+    transition: 0.5s;
+}
+
+.filmy_picture:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 3);
+    transition: 0.5s;
+}
+
 /*Q-O NÁS*/
 
     .o-nas__Tomas-Machalka{
@@ -836,6 +868,12 @@ dd {
         width: 40vw;
     }
 
+/*Filmy*/
+.filmy_picture {
+    min-height: 15em;
+    max-height: 20em;
+    }
+
 /*Q-ÚVOD*/
 
     .uvod{
@@ -849,7 +887,7 @@ dd {
 /*Q-FILM*/   
 
     .film__sec1--blok{
-        margin: auto 10em;
+        margin: auto 20em;
     }
 
     .film__sec1--text1{
@@ -933,7 +971,7 @@ dd {
     max-width: 950px;
 }
 
-/*Q-FILM*/   
+/*Q-FILM*/   archiv
 
 .film__sec1--blok{
     margin: auto 20em;
@@ -955,6 +993,16 @@ dd {
 .film__soundrack--blok, .film__galerie, .film__galerie, .sponzori{
     margin: auto 20em;
 }
+
+/*Filmy*/
+.filmy__obsah{
+    margin: auto 20em;
+}
+
+.filmy_picture {
+    min-height: 25em;
+    max-height: 37em;
+    }
 
 /*Q-ARCHIV*/
 

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="logo/DB-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/hamburger.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./lightgall/css/lg-zoom.css">
+	<link rel="stylesheet" href="./lightgall/css/lightgallery.css">
+	<link rel="stylesheet" href="./lightgall/css/lg-thumbnail.css">
+	<link rel="stylesheet" href="./lightgall/css/lg-autoplay.css">
+	<script src="./lightgall/lightgallery.min.js"></script>
+	<script src="./lightgall/plugins/thumbnail/lg-thumbnail.min.js"></script>
+	<script src="./lightgall/plugins/zoom/lg-zoom.min.js"></script>
+	<script src="./lightgall/plugins/autoplay/lg-autoplay.min.js"></script>
+    <script src="./hamburger.js"></script>
+    <script src="./slider.js"></script>
+    <title>Divadelní Budka | Filmy</title>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.esm.browser.min.js'
+      
+              const swiper = new Swiper(".swiper", {
+  
+          loop: true,
+          speed: 600,
+          autoHeight: true, //enable auto height
+          effect: "slide", //'slide' | 'fade' | 'cube' | 'coverflow' | 'flip' | 'cards'
+          keyboard: {
+            enabled: true,
+            onlyInViewport: false,
+          },
+          autoplay: {
+            delay: 2000,
+            //pouseOnMouseEnter: false,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+            hideOnClick: true,
+          },
+  
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true,
+            bulletElement: "a",
+            bulletClass: "swiper-pagination-bullet dot",
+          },
+  
+          scrollbar: {
+            //el: '.swiper-scrollbar',
+            el: null,
+            draggable: true
+          },
+
+          breakpoints: {
+          768: {
+            slidesPerView: 0,
+            autoHeight: false,
+          }
+        }
+        });
+  
+        document.querySelector("#next-slide").onclick = () => swiper.slideNext();
+      </script>
+</head>
+    
+<body>
+    <header class="header">
+        <div class="header__blackline">
+            <a class="header__email" href="mailto://divadelni.budka@seznam.cz">
+                <img src="./logo/email-logo.svg" alt="email">
+                <p class="header__email--text">divadelni.budka@seznam.cz</p>
+            </a>
+            <div class="header__social-networks">
+                <a href="https://www.facebook.com/Divadelnibudka" target="_blank">
+                    <img src="./logo/facebook-logo.svg" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com/divadelni.budka/" target="_blank">
+                    <img src="./logo/instagram-logo.svg" alt="Instagram">
+                </a>
+                <a href="https://www.youtube.com/@divadelnibudka" target="_blank">
+                    <img src="./logo/youtube-logo.svg" alt="YouTube">
+                </a>
+            </div>
+        </div>
+        <div class="header__navigace">
+            <div class="hamburger-row">
+                <a href="./index.html" class="navbar__logo">
+                    <img class="header__logo" src="./logo/DB-logo.png" alt="logo DB">
+                    <p class="header__text">Divadelní Budka</p>
+                </a>
+                    <a href="javascript:void(0)" class="hamburger hamburger-btn hamburger-zone">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+            </div>
+            <nav class="navbar hamburger-nav hamburger-zone">
+                <menu class="nav__pages">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">ÚVOD</a>
+                    </li>
+                    <li class="nav-item this-page">
+                        <a class="nav-link" href="./filmy_menu.html">FILMY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./archiv.html">ARCHIV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./o-nas.html">O NÁS</a>
+                    </li>
+                </menu>
+            </nav>
+        </div>
+    </header>
+    <main class="archiv">
+        <div class="h1__blok"><h1 class="nadpis-h1">FILMY</h1></div>
+        <div class="filmy__obsah">
+            <a href="./sherlock1.html">
+                <img class="filmy_picture" src="./images/Sherlock-Holmes-plakat.jpg" alt="Sherlock Holmes: Tahy Králů">
+            </a>
+            <a href="./dousek.html">
+                <img class="filmy_picture" src="./images/small/Dousek_plakat.jpg" alt="Doušek života">
+            </a>
+        </div>
+    </main>
+    <footer class="footer">
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+              var currentYear = new Date().getFullYear();
+              document.getElementById('currentYear').innerText = currentYear;
+          });
+      </script>
+  
+        <a href="./index.html">
+          <div class="footer__year">
+            <img src="./logo/DB-logo.png" alt="logo DB" class="footer__logo" />
+            <p class="footer__text">&copy;2016–<span id="currentYear"></span> Divadelní Budka</p>
+          </div>
+        </a>
+        <p class="footer__text-desktop">Vytvořila: Karolína Fučíková</p>
+      </footer>
+</body>
+</html>
